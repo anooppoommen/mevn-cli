@@ -1,4 +1,4 @@
-const common = {testEnvironment: 'node'};
+const common = { testEnvironment: 'node' };
 
 module.exports = {
   projects: [
@@ -7,6 +7,11 @@ module.exports = {
       displayName: 'e2e',
       setupFiles: ['<rootDir>/jest/setupE2eTests.js'],
       testMatch: ['<rootDir>/**/__e2e__/*{.,-}test.js'],
+    },
+    {
+      ...common,
+      displayName: 'init',
+      testMatch: ['<rootDir>/**/tests/*{.,-}test.js'],
     }
   ],
 };
